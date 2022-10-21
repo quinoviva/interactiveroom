@@ -1,6 +1,7 @@
-const sechand = document.querySelector('[data-second]')
-const minhand = document.querySelector('[data-second]')
-const hrhand = document.querySelector('[data-second]')
+console.log("test")
+const sechand = document.querySelector("[data-seconds]")
+const minhand = document.querySelector("[data-minutes]")
+const hrhand = document.querySelector("[data-hours]")
 
 function setclock(){
     console.log("clock")
@@ -9,14 +10,14 @@ function setclock(){
     let minutes = currentDate.getMinutes()
     let hours = currentDate.getHours()
     console.log(seconds)
-    setrotation(sechand, seconds)
+    setRotation(sechand, seconds)
     console.log(minutes)
-    setrotation(minhand, minutes)
+    setRotation(minhand, minutes)
     console.log(hours)
-    setrotation(hrhand, hours)
+    setRotation(hrhand, hours)
 }
 
-function setrotation(hand, rotation){
+function setRotation(hand, rotation){
     hand.style.setProperty('--rotation', rotation * 360)
 
 }
